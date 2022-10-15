@@ -1,0 +1,17 @@
+server:
+  port: 8763 # eureka 默认端口 8761
+
+spring:
+  application:
+    name: eureka-server # 应用名称 不要使用特殊字符
+
+eureka: # eureka 的配置分为三类， server client 实例的  eureka-server 既是 server 又是 client
+  client:
+    service-url: # 不写 默认 8761
+      deafultZone: http://localhost:8761/eureka,http://localhost:8762/eureka
+  instance: # 实例的配置
+    #    instance-id: localhost:eureka-server:8761 # 主机名称:应用名称:端口号
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port} # 主机名称:应用名称:端口号
+    hostname: localhost   # 主机名称 或者 服务的ip
+    prefer-ip-address: true # 以ip的形式显示具体的服务信息
+    lease-renewal-interval-in-seconds: 5  # 服务实例的续约时间间隔

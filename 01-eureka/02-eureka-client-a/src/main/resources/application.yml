@@ -3,13 +3,21 @@ server:
 spring:
   application:
     name: eureka-client-a
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - VMware.*  # 忽略虚拟机网卡
+      use-only-site-local-interfaces: true
+      preferred-networks: 192.168.0.* # 优先使用 192.168.0.*
 
 # 注册的含义，就是将自己的信息（ip，端口等）发送至服务端（指定一个地址）
 
 eureka:
   client:
     service-url: # 指定注册地址
-      deafultZone: http://loacalhost:8761/eureka
+      deafultZone: http://peer1:8761/eureka,http://peer2:8762/eureka,http://peer3:8763/eureka
+#      deafultZone: http://peer1:8761/eureka
+#      deafultZone: http://loacalhost:8761/eureka
     register-with-eureka: true # 可以不往 eureka 注册
     fetch-registry: true # 应用是否去拉取服务列表到本地
     registry-fetch-interval-seconds: 10 # 为了缓解服务列表的脏读问题，时间越短 脏读越少，性能消耗越大

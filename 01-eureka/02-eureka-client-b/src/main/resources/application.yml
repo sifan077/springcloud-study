@@ -9,4 +9,4 @@ spring:
 eureka:
   client:
     service-url: # 指定注册地址
-      deafultZone: http://loacalhost:8761/eureka
+      defaultZone: http://loacalhost:8761/eureka

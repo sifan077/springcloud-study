@@ -1,9 +1,15 @@
-server:
-  port: 8761 # eureka 默认端口 8761
-
-spring:
-  application:
-    name: eureka-server # 应用名称 不要使用特殊字符
+#server:
+#  port: 8761 # eureka 默认端口 8761
+#
+#spring:
+#  application:
+#    name: eureka-server # 应用名称 不要使用特殊字符
+#  cloud:
+#    inetutils:
+#      ignored-interfaces:
+#        - VMware.*  # 忽略虚拟机网卡
+#      use-only-site-local-interfaces: true
+#      preferred-networks: 192.168.0.* # 优先使用 192.168.0.*
 
 #eureka: # eureka 的配置分为三类， server client 实例的  eureka-server 既是 server 又是 client
 #  server:
@@ -16,13 +22,40 @@ spring:
 #    prefer-ip-address: true # 以ip的形式显示具体的服务信息
 #    lease-renewal-interval-in-seconds: 5  # 服务实例的续约时间间隔
 
+#eureka: # eureka 的配置分为三类， server client 实例的  eureka-server 既是 server 又是 client
+#  client:
+#    service-url: # 不写 默认 8761
+#      defaultZone: http://peer1:8762/eureka,http://peer3:8763/eureka
+#  instance: # 实例的配置
+#    #    instance-id: localhost:eureka-server:8761 # 主机名称:应用名称:端口号
+#    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port} # 主机名称:应用名称:端口号
+#    #    hostname: localhost   # 主机名称 或者 服务的ip
+#    hostname: peer1   # 主机名称 或者 服务的ip
+#    prefer-ip-address: true # 以ip的形式显示具体的服务信息
+#    lease-renewal-interval-in-seconds: 5  # 服务实例的续约时间间隔
+#
+server:
+  port: 8761 # eureka 默认端口 8761
+
+spring:
+  application:
+    name: eureka-server # 应用名称 不要使用特殊字符
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - VMware.*  # 忽略虚拟机网卡
+      use-only-site-local-interfaces: true
+      preferred-networks: 192.168.0.* # 优先使用 192.168.0.*
+
+#集群的终极方案
 eureka: # eureka 的配置分为三类， server client 实例的  eureka-server 既是 server 又是 client
   client:
     service-url: # 不写 默认 8761
-      deafultZone: http://localhost:8762/eureka,http://localhost:8763/eureka
+      defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka,http://peer3:8763/eureka
   instance: # 实例的配置
     #    instance-id: localhost:eureka-server:8761 # 主机名称:应用名称:端口号
-    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port} # 主机名称:应用名称:端口号
-    hostname: localhost   # 主机名称 或者 服务的ip
+    instance-id: ${spring.application.name}:${server.port} # 主机名称:应用名称:端口号
+    #    hostname: localhost   # 主机名称 或者 服务的ip
+    #    hostname: peer1   # 主机名称 或者 服务的ip
     prefer-ip-address: true # 以ip的形式显示具体的服务信息
     lease-renewal-interval-in-seconds: 5  # 服务实例的续约时间间隔

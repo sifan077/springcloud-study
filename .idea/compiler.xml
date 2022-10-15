@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="02-eureka-client-a" />
+        <module name="03-eureka-client-b" />
         <module name="01-eureka" />
         <module name="01-eureka-server" />
         <module name="springcloud-study" />
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="01-eureka-server" options="-parameters" />
       <module name="02-eureka-client-a" options="-parameters" />
+      <module name="03-eureka-client-b" options="-parameters" />
     </option>
   </component>
 </project>

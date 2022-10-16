@@ -6,18 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-client-b" />
         <module name="01-eureka" />
         <module name="01-eureka-server" />
         <module name="01-eureka-server-b" />
         <module name="01-eureka-server-c" />
         <module name="02-eureka-client-a" />
+        <module name="02-eureka-client-b" />
         <module name="springcloud-study" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-eureca" target="8" />
-      <module name="02-eureka-client-b" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -27,7 +26,6 @@
       <module name="01-eureka-server-c" options="-parameters" />
       <module name="02-eureka-client-a" options="-parameters" />
       <module name="02-eureka-client-b" options="-parameters" />
-      <module name="eureka-client-b" options="-parameters" />
     </option>
   </component>
 </project>

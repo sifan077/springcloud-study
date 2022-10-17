@@ -15,10 +15,13 @@
         <module name="02-eureka-client-a" />
         <module name="03-rest-template" />
         <module name="02-consumer" />
+        <module name="01-order-service" />
+        <module name="02-user-service" />
         <module name="02-eureka-client-b" />
-        <module name="springcloud-study" />
         <module name="01-provider-b" />
         <module name="01-provider-a" />
+        <module name="03-openfeign" />
+        <module name="springcloud-study" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,11 +33,13 @@
       <module name="01-eureka-server" options="-parameters" />
       <module name="01-eureka-server-b" options="-parameters" />
       <module name="01-eureka-server-c" options="-parameters" />
+      <module name="01-order-service" options="-parameters" />
       <module name="01-provider-a" options="-parameters" />
       <module name="01-provider-b" options="-parameters" />
       <module name="02-consumer" options="-parameters" />
       <module name="02-eureka-client-a" options="-parameters" />
       <module name="02-eureka-client-b" options="-parameters" />
+      <module name="02-user-service" options="-parameters" />
       <module name="03-rest-template" options="-parameters" />
     </option>
   </component>

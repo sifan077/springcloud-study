@@ -41,7 +41,7 @@ public class ConsumerController {
     /**
      * 添加LoadBalanced注解，RestTemplate就会被ribbon操作
      * 如果不想走ribbon托管，需要重新new 创建对象
-     * @return
+     * @return RestTemplate
      */
     @Bean
     @LoadBalanced

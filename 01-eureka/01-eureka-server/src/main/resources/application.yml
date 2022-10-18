@@ -49,9 +49,9 @@ spring:
 
 #集群的终极方案
 eureka: # eureka 的配置分为三类， server client 实例的  eureka-server 既是 server 又是 client
-  client:
-    service-url: # 不写 默认 8761
-      defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka,http://peer3:8763/eureka
+#  client:
+#    service-url: # 不写 默认 8761
+#      defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka,http://peer3:8763/eureka
   instance: # 实例的配置
     #    instance-id: localhost:eureka-server:8761 # 主机名称:应用名称:端口号
     instance-id: ${spring.application.name}:${server.port} # 主机名称:应用名称:端口号

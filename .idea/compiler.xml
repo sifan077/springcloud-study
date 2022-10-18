@@ -8,20 +8,27 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="01-eureka" />
+        <module name="user-center" />
         <module name="01-eureka-server" />
         <module name="01-eureka-server-b" />
         <module name="01-eureka-server-c" />
+        <module name="project-domain" />
         <module name="02-ribbon" />
         <module name="02-eureka-client-a" />
         <module name="03-rest-template" />
         <module name="02-consumer" />
         <module name="01-order-service" />
         <module name="02-user-service" />
+        <module name="04-hystrix" />
         <module name="02-eureka-client-b" />
+        <module name="order-center" />
+        <module name="01-customer-service" />
         <module name="01-provider-b" />
         <module name="01-provider-a" />
+        <module name="common-api" />
         <module name="03-openfeign" />
         <module name="springcloud-study" />
+        <module name="02-rent-car-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +37,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01-customer-service" options="-parameters" />
       <module name="01-eureka-server" options="-parameters" />
       <module name="01-eureka-server-b" options="-parameters" />
       <module name="01-eureka-server-c" options="-parameters" />
@@ -39,8 +47,14 @@
       <module name="02-consumer" options="-parameters" />
       <module name="02-eureka-client-a" options="-parameters" />
       <module name="02-eureka-client-b" options="-parameters" />
+      <module name="02-rent-car-service" options="-parameters" />
       <module name="02-user-service" options="-parameters" />
+      <module name="03-feign-project" options="-parameters" />
       <module name="03-rest-template" options="-parameters" />
+      <module name="common-api" options="-parameters" />
+      <module name="order-center" options="-parameters" />
+      <module name="project-domain" options="-parameters" />
+      <module name="user-center" options="-parameters" />
     </option>
   </component>
 </project>

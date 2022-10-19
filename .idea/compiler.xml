@@ -14,6 +14,7 @@
         <module name="01-eureka-server-c" />
         <module name="project-domain" />
         <module name="02-ribbon" />
+        <module name="05-admin-server" />
         <module name="02-eureka-client-a" />
         <module name="03-rest-template" />
         <module name="02-consumer" />
@@ -51,6 +52,7 @@
       <module name="02-user-service" options="-parameters" />
       <module name="03-feign-project" options="-parameters" />
       <module name="03-rest-template" options="-parameters" />
+      <module name="05-admin-server" options="-parameters" />
       <module name="common-api" options="-parameters" />
       <module name="order-center" options="-parameters" />
       <module name="project-domain" options="-parameters" />

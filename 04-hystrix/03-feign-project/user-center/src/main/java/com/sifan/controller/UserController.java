@@ -1,11 +1,3 @@
-/*
- * Created by IntelliJ IDEA.
- * User: 思凡
- * Date: 2022/10/18
- * Time: 11:39
- * Describe:
- */
-
 package com.sifan.controller;
 
 import com.sifan.domain.Order;
@@ -15,6 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ * 用户控制器
+ *
+ * @author 思凡
+ * @date 2022/10/19
+ */
 @RestController
 public class UserController {
 

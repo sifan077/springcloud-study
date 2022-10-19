@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: user-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 0.1 # 采集率，默认采样比例是：0.1 设置的值为0-1，1表示全部采集
+      rate: 10 # 使用速率限制采样器，选择每秒间隔接受的trace量，最小数字是0，最大值是  int  默认值是10
 eureka:
   client:
     service-url:
@@ -14,3 +20,9 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+management: # 暴露自己端点和接口的配置
+  endpoints:
+    web:
+      exposure:
+        include: '*'

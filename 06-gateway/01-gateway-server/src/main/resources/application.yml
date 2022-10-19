@@ -11,3 +11,14 @@ spring:
           uri: http://localhost:8081 # uri 同一资源定位符 url 同一资源标识符
           predicates:
             - Path=/doLogin  # 匹配规则 只要path匹配上了/doLogin 就往uri 转发，并且将路径带上
+      discovery:
+        locator:
+          enabled: true # 开启动态路由 开启通过应用名称 找到服务的功能,访问时带上应用名称即可 /application-name/uri
+          lower-case-service-id: true # 开启服务名称小写
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}

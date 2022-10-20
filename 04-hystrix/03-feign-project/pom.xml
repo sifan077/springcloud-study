@@ -28,10 +28,6 @@
 
     <!--在此的依赖 子模块也会拥有-->
     <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
     </dependencies>
 
     <!--在这的依赖不会被加载进项目，只是版本控制-->

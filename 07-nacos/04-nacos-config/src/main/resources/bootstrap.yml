@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      config:
+        name: nacos
+        password: nacos
+        prefix: hero # 表示读哪个配置文件
+        file-extension: yml # 配置文件类型
+        server-addr: localhost:8848 # 去哪里读取配置
+#        group:
+#        namespace:
+# 项目启动时去哪里找对应的配置文件

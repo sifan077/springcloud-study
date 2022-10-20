@@ -19,6 +19,7 @@
         <module name="01-customer-service" />
         <module name="03-openfeign" />
         <module name="01-gateway-server" />
+        <module name="07-nacos" />
         <module name="springcloud-study" />
         <module name="02-rent-car-service" />
         <module name="01-eureka" />
@@ -26,9 +27,11 @@
         <module name="01-eureka-server" />
         <module name="01-eureka-server-b" />
         <module name="01-eureka-server-c" />
+        <module name="02-nacos-client-b" />
         <module name="02-login-service" />
         <module name="02-user-service" />
         <module name="04-hystrix" />
+        <module name="01-nacos-client-a" />
         <module name="01-provider-b" />
         <module name="01-provider-a" />
         <module name="common-api" />

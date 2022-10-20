@@ -1,0 +1,16 @@
+# 应用名称
+server:
+  port: 8081
+spring:
+  application:
+    name: nacos-client-b
+  cloud:
+    nacos:
+      server-addr: localhost:8848 # 去这个地址注册
+      username: nacos
+      password: nacos
+      discovery: # 如果不指定命名空间 默认注册到public中，如果没有指定分组 默认注册到DEFAULT_GROUP
+        namespace: add1eb31-fd1b-42ed-8745-3b96709b67fc  # 去哪个命名空间注册
+        group: A_GROUP  # 去哪个组注册
+        service: user-service # 这个是注册列表的名字，不写就是应用名称
+

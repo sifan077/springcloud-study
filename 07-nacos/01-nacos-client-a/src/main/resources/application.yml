@@ -1,0 +1,12 @@
+# 应用名称
+server:
+  port: 8080
+spring:
+  application:
+    name: nacos-client-a
+  cloud:
+    nacos:
+      discovery: # 如果不指定命名空间 默认注册到public中，如果没有指定分组 默认注册到DEFAULT_GROUP
+        server-addr: localhost:8848 # 去这个地址注册
+        username: nacos
+        password: nacos

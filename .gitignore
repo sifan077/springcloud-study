@@ -1,0 +1,8 @@
+**/target/
+./01-eureka/**/.gitignore
+./02-ribbon/**/.gitignore
+./03-openfeign/**/.gitignore
+./04-hystrix/**/.gitignore
+./05-admin-server/**/.gitignore
+./06-gateway/**/.gitignore
+./07-nacos/**/.gitignore
